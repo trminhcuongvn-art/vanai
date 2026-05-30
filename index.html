@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>VănAI - Trợ lý viết lách văn phòng</title>
+  <meta name="description" content="AI viết email, báo cáo, đề xuất, tin nhắn khách hàng và kịch bản video cho dân văn phòng Việt Nam." />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="app">
+    <section class="hero">
+      <div class="badge">VănAI Prototype</div>
+      <h1>Viết nhanh, đúng giọng, chuẩn văn phòng Việt Nam</h1>
+      <p>Chọn mẫu, nhập vài từ mô tả tình huống. VănAI sẽ soạn bản nháp hoàn chỉnh để bạn chỉnh sửa và gửi đi.</p>
+    </section>
+
+    <section class="panel" aria-label="Công cụ tạo nội dung">
+      <div class="field">
+        <label for="template">Mẫu viết lách</label>
+        <select id="template">
+          <option value="email">Email công việc</option>
+          <option value="shortVideo">Kịch bản TikTok/Reels</option>
+          <option value="weeklyReport">Báo cáo tuần cho sếp</option>
+          <option value="proposal">Đề xuất / xin phê duyệt</option>
+          <option value="customerMessage">Tin nhắn khách hàng</option>
+        </select>
+      </div>
+
+      <div id="subtypeWrap" class="field">
+        <label for="subtype">Kiểu nội dung</label>
+        <select id="subtype"></select>
+      </div>
+
+      <div class="field">
+        <label for="situation">Mô tả tình huống <span>2-3 từ cũng được</span></label>
+        <textarea id="situation" rows="4" placeholder="VD: xin nghỉ ốm, khách phàn nàn giao chậm, đề xuất mua phần mềm..."></textarea>
+      </div>
+
+      <div class="actions">
+        <button id="generateBtn">Tạo văn bản</button>
+        <button id="copyBtn" class="ghost" disabled>Sao chép</button>
+      </div>
+
+      <p id="status" class="status" role="status" aria-live="polite"></p>
+
+      <div class="outputBox">
+        <label for="output">Kết quả</label>
+        <textarea id="output" rows="12" readonly placeholder="Văn bản hoàn chỉnh sẽ xuất hiện ở đây..."></textarea>
+      </div>
+    </section>
+
+    <section class="templates">
+      <h2>5 template có sẵn</h2>
+      <div class="grid">
+        <article><strong>Email công việc</strong><span>Formal, informal, từ chối, xin phép.</span></article>
+        <article><strong>TikTok/Reels</strong><span>Hook, nội dung chính, CTA.</span></article>
+        <article><strong>Báo cáo tuần</strong><span>Tóm tắt tiến độ, kết quả, vướng mắc, kế hoạch.</span></article>
+        <article><strong>Đề xuất phê duyệt</strong><span>Lý do, lợi ích, chi phí, bước tiếp theo.</span></article>
+        <article><strong>Tin nhắn khách hàng</strong><span>Chăm sóc, xử lý khiếu nại.</span></article>
+      </div>
+    </section>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>
